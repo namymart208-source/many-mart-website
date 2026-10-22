@@ -1,8 +1,8 @@
-# MANY MART — GitHub + Cloudflare Pages + Supabase
+# NAMY MART — GitHub + Cloudflare Pages + Supabase
 
 Bản giao diện chạy sẵn, không cần cài Node.js trên máy. Giao diện song ngữ Việt–Anh; menu, thư viện ảnh và admin email/mật khẩu.
 
-Tên MANY MART giữ đúng yêu cầu đặt tên webapp trong cuộc trò chuyện. Có thể đổi tên hiển thị trong các file HTML/nguồn nếu cần.
+Tên cửa hàng đã được cập nhật thành NAMY MART trên toàn bộ trang giới thiệu, Menu, Hình ảnh và Admin. Có 8 ảnh đính kèm mới trong thư viện; không bổ sung ảnh cigar vào website quảng bá.
 
 ## 1. Tạo bảng và kho ảnh trong Supabase
 
@@ -102,3 +102,13 @@ Xóa bài đăng không tự xóa file ảnh khỏi bucket để tránh làm h�
 - https://supabase.com/docs/guides/database/postgres/row-level-security
 - https://supabase.com/docs/guides/storage/security/access-control
 - https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+
+## Cập nhật từ bản cũ
+
+Giữ nguyên `site/config.js` anh đã cấu hình với project Supabase. Thay các file giao diện và thư mục ảnh bằng bản mới, sau đó khôi phục file config.js của anh. Không cần chạy lại SQL nếu đã cài đặt bản trước. Bản này không tự thay đổi dữ liệu sản phẩm hoặc tài khoản Admin trong Supabase.
+
+## Nếu đang dùng Cloudflare Workers (project many-mart-website)
+
+Gói mới có `wrangler.jsonc` ngay gốc repository để xuất bản thư mục `site/`. Giữ Root directory tại gốc repository; Build command để trống (hoặc `exit 0` nếu bắt buộc); Deploy command `npx wrangler deploy`. Không upload ZIP trực tiếp lên GitHub; giải nén và cập nhật file. Không cần tạo lại project đang có. URL do Cloudflare hiển thị trong Domains được giữ nguyên.
+
+Nếu dùng Cloudflare Pages, chọn output directory `site` như hướng dẫn ở trên; không cần lệnh Wrangler.
