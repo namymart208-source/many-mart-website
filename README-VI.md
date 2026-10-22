@@ -112,3 +112,6 @@ Giữ nguyên `site/config.js` anh đã cấu hình với project Supabase. Thay
 Gói mới có `wrangler.jsonc` ngay gốc repository để xuất bản thư mục `site/`. Giữ Root directory tại gốc repository; Build command để trống (hoặc `exit 0` nếu bắt buộc); Deploy command `npx wrangler deploy`. Không upload ZIP trực tiếp lên GitHub; giải nén và cập nhật file. Không cần tạo lại project đang có. URL do Cloudflare hiển thị trong Domains được giữ nguyên.
 
 Nếu dùng Cloudflare Pages, chọn output directory `site` như hướng dẫn ở trên; không cần lệnh Wrangler.
+
+## Giao diện v3
+Nền xanh đêm, xanh ngọc và vàng champagne; cỡ chữ và nút bấm lớn hơn; chữ tiếng Việt dùng font nhúng. Cập nhật site/home.css, site/app.css, các file HTML và toàn bộ thư mục site/fonts. Giữ nguyên site/config.js đã điền URL/key. Không cần chạy lại SQL.
