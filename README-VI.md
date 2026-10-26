@@ -28,7 +28,7 @@ Trong cấu hình Supabase Auth, có thể tắt tạo tài khoản mới nếu 
 
 Trong project Supabase, mở Connect để lấy Project URL và Publishable key.
 Hoặc Settings → API Keys để lấy Publishable key (`sb_publishable_...`). Legacy anon key cũng được hỗ trợ.
-Mở `site/config.js` và thay hai giá trị:
+Cài mới lần đầu: sao chép `setup/config.example.js` sang `site/config.js`. Nếu đang cập nhật, giữ nguyên `site/config.js` đã cấu hình. Mở file đó và thay hai giá trị:
 
     url: "https://PROJECT-ID.supabase.co",
     publishableKey: "sb_publishable_..."
@@ -115,3 +115,13 @@ Nếu dùng Cloudflare Pages, chọn output directory `site` như hướng dẫn
 
 ## Giao diện v3
 Nền xanh đêm, xanh ngọc và vàng champagne; cỡ chữ và nút bấm lớn hơn; chữ tiếng Việt dùng font nhúng. Cập nhật site/home.css, site/app.css, các file HTML và toàn bộ thư mục site/fonts. Giữ nguyên site/config.js đã điền URL/key. Không cần chạy lại SQL.
+
+## Cập nhật v4 — liên kết Google
+Đã thêm liên kết Google do chủ cửa hàng cung cấp: https://share.google/Xl8w2SHJksVMvG04h . Nút ở phần Liên hệ trang chủ và chân trang trên toàn bộ trang, hỗ trợ Việt–Anh và mở tab mới. Đây là liên kết xem cửa hàng, không phải liên kết trực tiếp viết đánh giá; không hiển thị điểm đánh giá giả.
+
+Gói cập nhật KHÔNG chứa site/config.js để tránh ghi đè URL/key Supabase đã lưu trên GitHub. Không xóa file này trong repository hiện tại. Nếu cài mới, sao chép setup/config.example.js sang site/config.js và nhập URL/key của project. Không cần chạy lại SQL khi cập nhật từ v3.
+
+## Cập nhật v5 — logo, favicon và slideshow
+Logo Golden N mới ở header/footer trên mọi trang; favicon ICO, PNG, Apple Touch và manifest. Trang chủ có 7 ảnh xáo trộn mỗi lần mở, tự chuyển sau 6 giây; có nút trước/sau, chọn ảnh và tạm dừng. Tự dừng khi tab bị ẩn, khi chuột/focus ở slideshow; giảm chuyển động được tôn trọng. Không có ảnh thuốc lá/cigar trong slideshow.
+
+Cập nhật toàn bộ thư mục site/assets, site/fonts, HTML/CSS/JS và các file favicon/manifest. Giữ site/config.js hiện tại trên GitHub: file này không nằm trong ZIP cập nhật. Không cần chạy lại SQL. Bản mới vẫn có các mục menu và upload quản trị như trước.
