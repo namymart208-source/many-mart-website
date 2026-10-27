@@ -7,3 +7,6 @@ Restored complete Ballantine’s Finest and La Fiole Rosé image files. Every bu
 
 ## v8 — Mobile and tablet layouts
 Responsive phone/tablet navigation, touch targets, safe-area spacing, slideshow controls, gallery grids and admin forms. Includes v7 image repairs. Preserve site/config.js.
+
+## v9 — Boutique refinement
+Calmer homepage, four curated slides, grouped gallery filters, mobile call and directions. Store hours, Zalo and a direct review URL need confirmation. Preserve existing site/config.js; no database changes.
